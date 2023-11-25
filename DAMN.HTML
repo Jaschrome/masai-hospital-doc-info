@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Hospital - Doctor Records</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Hospital - Doctor Records</h1>
+    <div class="container">
+        <form id="doctor-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            <label for="id">Doctor ID:</label>
+            <input type="text" id="id" name="id" required><br>
+            <label for="specialization">Specialization:</label>
+            <select id="specialization" name="specialization" required>
+                <option value="All">All</option>
+                <option value="ENT">ENT</option>
+                <option value="Cardiology">Cardiology</option>
+                <option value="Neurology">Neurology</option>
+                <option value="Dermatology">Dermatology</option>
+            </select><br>
+            <label for="experience">Experience in years:</label>
+            <input type="number" id="experience" name="experience" min="0" required><br>
+            <label for="email">Email address:</label>
+            <input type="email" id="email" name="email" required><br>
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required><br>
+            <input type="submit" value="Submit">
+        </form>
+
+        <label for="filter">Filter by Specialization:</label>
+        <select id="filter" name="filter">
+            <option value="All">All</option>
+            <option value="ENT">ENT</option>
+            <option value="Cardiology">Cardiology</option>
+            <option value="Neurology">Neurology</option>
+            <option value="Dermatology">Dermatology</option>
+        </select>
+
+        <table id="doctor-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Doctor ID</th>
+                    <th>Specialization</th>
+                    <th>Experience</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Role</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody id="doctor-body"></tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
